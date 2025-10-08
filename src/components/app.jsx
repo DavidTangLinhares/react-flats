@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SimpleMap from './google-map-react';
 
 class App extends Component {
   constructor(props) {
@@ -28,7 +29,7 @@ class App extends Component {
           </div>
         </div>
         <div className="map-container">
-          hello Map
+          <SimpleMap />
         </div>
       </div>
     );

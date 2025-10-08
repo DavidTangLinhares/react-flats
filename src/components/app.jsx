@@ -13,8 +13,8 @@ class App extends Component {
   }
 
   handleClick = (flat) => {
-    console.log('App: handleClick');
-    console.log(flat);
+    // console.log('App: handleClick');
+    // console.log(flat);
 
     this.setState({
       marker: flat
@@ -26,6 +26,7 @@ class App extends Component {
       <div>
           <FlatList
             handleClick={this.handleClick}
+            selected={this.state.marker}
           />
         <div className="map-container">
           <SimpleMap

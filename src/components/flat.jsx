@@ -7,12 +7,16 @@ class Flat extends Component {
   };
 
   render() {
-    const { flat } = this.props;
+    const { flat, isActive } = this.props;
+    const cardClass = isActive ? 'card active' : 'card';
+
+    console.log(cardClass);
+    console.log(this.props);
     // console.log(flat);
 
     return (
       <div
-        className='card'
+        className={cardClass}
         style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url(${flat.imageUrl})`}}
         onClick={this.flatClick}
       >

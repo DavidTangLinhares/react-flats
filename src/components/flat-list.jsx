@@ -4,11 +4,11 @@ import Flat from './flat';
 
 class FlatList extends Component {
   render() {
-    console.log(flats);
+    // console.log(flats);
     return (
       <div className='flat-list'>
         {flats.map((flat, index) => {
-          return <Flat key={index} flat={flat} />
+          return <Flat key={index} flat={flat} handleClick={this.props.handleClick}/>
         })}
       </div>
     )

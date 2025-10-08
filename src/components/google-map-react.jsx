@@ -1,16 +1,18 @@
 import React from "react";
 import GoogleMapReact from 'google-map-react';
+import Marker from './marker';
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
+export default function SimpleMap( { marker } ) {
 
-export default function SimpleMap(){
   const defaultProps = {
     center: {
-      lat: 10.99835602,
-      lng: 77.01502627
+      lat: marker.lat || 48.884211,
+      lng: marker.lng || 2.34689
     },
-    zoom: 11
+    zoom: 12
   };
+
+  console.log(marker);
 
   return (
     // Important! Always set the container height explicitly
@@ -20,10 +22,9 @@ export default function SimpleMap(){
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
       >
-        <AnyReactComponent
-          lat={10.99835602}
-          lng={77.01502627}
-          text="❤️"
+        <Marker
+          lat={marker.lat}
+          lng={marker.lng}
         />
       </GoogleMapReact>
     </div>

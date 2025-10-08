@@ -7,15 +7,30 @@ class App extends Component {
     super(props);
 
     this.state = {
-      name: 'App'
+      name: 'App',
+      marker: {}
     };
   }
+
+  handleClick = (flat) => {
+    console.log('App: handleClick');
+    console.log(flat);
+
+    this.setState({
+      marker: flat
+    });
+  }
+
   render() {
     return (
       <div>
-          <FlatList />
+          <FlatList
+            handleClick={this.handleClick}
+          />
         <div className="map-container">
-          <SimpleMap />
+          <SimpleMap
+            marker={this.state.marker}
+          />
         </div>
       </div>
     );

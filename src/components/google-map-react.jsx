@@ -21,12 +21,11 @@ export default function SimpleMap(){
         defaultZoom={defaultProps.zoom}
       >
         <AnyReactComponent
-          lat={59.955413}
-          lng={30.337844}
-          text="My Marker"
+          lat={10.99835602}
+          lng={77.01502627}
+          text="❤️"
         />
       </GoogleMapReact>
     </div>
   );
 }
-
